@@ -20,7 +20,10 @@ cargo run --bin gui72
 
 ```
 cargo run --bin gui73
+
 ```
+Used datepicker ```fltk-calendar = "0.3"```. Date is set on double-click in datepicker. 
+
 ![Flight Booker](screenshots/flight_booker.png)
 
 ### 4. Timer
@@ -47,7 +50,7 @@ INNER JOIN movie_genres mg ON mg.movie_id = m.movie_id
 INNER JOIN genre g ON g.genre_id = mg.genre_id
 GROUP BY m.movie_id
 ```
-![CRUD](screenshots/crud.png)
+![CRUD](screenshots/crud_crop.png)
 
 ### 6. Circle Drawer
 
@@ -64,10 +67,15 @@ Click to draw a circle, right click to edit radius
 ```
 cargo run --bin gui77
 ```
+Used locally modified version of [fltk-table = "0.3.1"](https://github.com/fltk-rs/fltk-table) (fltk_table_031.rs),
+where border lines thickness is improved, and added key event for editing cells on F2 or Enter or Tab.  
+
 Entering data and calculating formulas in the cells. Formulas can be: SUM, AVG, PROD. 
 Example: ```=SUM(B1:C3)``` -> calculates sum of values in range B1, B2, B3, C1, C2, C3. 
 
 If some calculated values are in range, they will also be taken in some other calculations, like in screenshot example. 
 
-![Cells](screenshots/cells.png)
+Moving over cells by Tab/Shift+Tab.
+
+![Cells](screenshots/cells3.png)
 
