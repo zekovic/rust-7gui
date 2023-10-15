@@ -1,0 +1,60 @@
+[package]
+name = "fltk_7gui"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[[bin]]
+name = "gui71"
+path = "src/gui71.rs"
+[[bin]]
+name = "gui72"
+path = "src/gui72.rs"
+[[bin]]
+name = "gui73"
+path = "src/gui73.rs"
+[[bin]]
+name = "gui74"
+path = "src/gui74.rs"
+[[bin]]
+name = "gui75"
+path = "src/gui75.rs"
+[[bin]]
+name = "gui76"
+path = "src/gui76.rs"
+[[bin]]
+name = "gui77"
+path = "src/gui77.rs"
+
+
+[dependencies]
+#fltk = "^1.4"
+fltk = { version = "^1.4", features = ["fltk-bundled"] }
+#fltk = { version = "^1.4", features = ["fltk-shared"] }
+fltk-theme = "0.7"
+#fltk-grid = "0.2"
+fltk-calendar = "0.3"
+#fltk-table = "0.1"
+#fltk-table = "0.3.1"
+rand = "0.8.5"
+#serde = { version = "1.0.105", features = ["derive"] }
+#serde_json = "1.0.105"
+chrono = "0.4"
+#winres = "0.1.12"
+#rusqlite = "0.29.0"
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+
+
+
+#[profile.dev]
+#lto = true
+#strip = true
+
+[profile.release]
+strip = true
+opt-level = 2
+lto = true
+#codegen-units = 1
+#panic = "abort"
